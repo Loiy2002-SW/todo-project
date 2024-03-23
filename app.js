@@ -61,3 +61,50 @@ alert('Welcome Ms. ' + username);
 
 }
 
+// Lab 5 addition
+
+var questions = [
+'Would you like to receive notifications for upcoming tasks? (Yes or NO)',
+'Do you want to set reminders for important tasks? (Yes or NO)',
+'Should we automatically save your to-do list locally for easy access? (Yes or NO)'
+];
+
+
+displayAnswers(askQuestions(questions));
+
+
+
+
+
+function askQuestions(questionsArr){
+
+    
+let answers = ['Invalid', 'Invalid', 'Invalid'];
+
+    for (let i = 0; i < questionsArr.length; i++) {
+    
+        var answer = prompt(questionsArr[i]);
+    
+        if(answer != null && (answer.toLowerCase() === 'yes' || answer.toLowerCase() === 'no')){
+            answers[i] = answer;
+        }
+        
+    }
+
+    return answers
+
+}
+
+function displayAnswers(answerArr){
+
+
+    console.log('The user answers: ' + answerArr);
+
+
+}
+
+
+
+
+
+
